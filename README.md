@@ -2,10 +2,9 @@
 
 ProgressWebView library can use webview with progressbar for SwfitUI
 
-[![Swift Version](https://img.shields.io/badge/Swfit-5.0-orange)](https://developer.apple.com/swift)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ksugawara61/ProgressWebView)
-![Github](https://img.shields.io/cocoapods/l/ProgressWebView)
-![CocoaPods](https://img.shields.io/cocoapods/v/ProgressWebView)
+[![Swift Version](https://img.shields.io/badge/Swfit-5.0-blue)](https://developer.apple.com/swift)
+[![Github](https://img.shields.io/cocoapods/l/ProgressWebView)](https://github.com/ksugawara61/ProgressWebView)
+[![CocoaPods](https://img.shields.io/cocoapods/v/ProgressWebView)](https://github.com/ksugawara61/ProgressWebView)
 
 ## Install
 
