@@ -8,19 +8,19 @@
 
 import Foundation
 
-class WebViewModel: ObservableObject {
+open class WebViewModel: ObservableObject {
     @Published var urlString: String
     @Published var estimatedProgress: Double = 0.0
 
-    init(urlString: String) {
+    public init(urlString: String) {
         self.urlString = urlString
     }
 
-    func updateUrlString(urlString: String) {
+    open func updateUrlString(urlString: String) {
         self.urlString = urlString
     }
 
-    func updateEstimatedProgress(estimatedProgress: Double) {
+    open func updateEstimatedProgress(estimatedProgress: Double) {
         self.estimatedProgress = estimatedProgress
         objectWillChange.send()
     }

@@ -11,8 +11,8 @@ import SwiftUI
 public struct ProgressBarWebView: View {
     @ObservedObject private var viewModel: WebViewModel
 
-    public init(urlString: String) {
-        self.viewModel = WebViewModel(urlString: urlString)
+    public init(viewModel: WebViewModel) {
+        self.viewModel = viewModel
     }
 
     public var body: some View {
@@ -24,7 +24,8 @@ public struct ProgressBarWebView: View {
 }
 
 struct ProgressBarWebView_Previews: PreviewProvider {
+    static let viewModel = WebViewModel(urlString: "https://google.com")
     static var previews: some View {
-        ProgressBarWebView(urlString: "https://google.com")
+        ProgressBarWebView(viewModel: self.viewModel)
     }
 }

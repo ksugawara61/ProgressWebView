@@ -9,9 +9,17 @@
 import SwiftUI
 import ProgressWebView
 
+class SampleViewModel: WebViewModel {
+    init() {
+        super.init(urlString: "https://google.com")
+    }
+}
+
 struct ContentView: View {
+    private let viewModel = SampleViewModel()
+
     var body: some View {
-        ProgressBarWebView(urlString: "https://google.com")
+        ProgressBarWebView(viewModel: self.viewModel)
     }
 }
 
