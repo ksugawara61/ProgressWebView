@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'ProgressWebView'
-  spec.version      = '0.0.2'
+  spec.version      = '0.0.3'
   spec.summary      = 'WebView with ProgressBar.'
   spec.description  = <<-DESC
                     WebView with ProgressBar for SwiftUI.
