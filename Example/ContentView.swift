@@ -13,6 +13,11 @@ class SampleViewModel: WebViewModel {
     init() {
         super.init(urlString: "https://google.com")
     }
+
+    func useVariables() {
+        print(self.urlString)
+        print(self.estimatedProgress)
+    }
 }
 
 struct ContentView: View {

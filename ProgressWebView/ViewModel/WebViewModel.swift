@@ -9,8 +9,8 @@
 import Foundation
 
 open class WebViewModel: ObservableObject {
-    @Published var urlString: String
-    @Published var estimatedProgress: Double = 0.0
+    @Published public var urlString: String
+    @Published public var estimatedProgress: Double = 0.0
 
     public init(urlString: String) {
         self.urlString = urlString
