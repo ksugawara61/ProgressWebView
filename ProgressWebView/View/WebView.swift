@@ -15,18 +15,26 @@ struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
-        if let url = URL(string: viewModel.urlString) {
-            webView.load( URLRequest(url: url))
-        }
+        loadUrl(webView: webView, urlString: viewModel.urlString)
         return webView
     }
 
-    func updateUIView(_ uiView: WKWebView, context: Context) {
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        if (self.viewModel.isForceUpdate) {
+            loadUrl(webView: webView, urlString: viewModel.urlString)
+        }
         return
     }
 
     func makeCoordinator() -> WebViewCoordinator {
         return WebViewCoordinator(viewModel)
+    }
+
+    private func loadUrl(webView: WKWebView, urlString: String) {
+        self.viewModel.isForceUpdate = false
+        if let url = URL(string: viewModel.urlString) {
+            webView.load(URLRequest(url: url))
+        }
     }
 }
 

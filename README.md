@@ -32,10 +32,19 @@ class SampleViewModel: WebViewModel {
 }
 
 struct ContentView: View {
-    private let viewModel = SampleViewModel()
+    @ObservedObject private var viewModel = SampleViewModel()
+
+    var updateButton: some View {
+        Button("Open github.com") {
+            self.viewModel.updateUrlString(urlString: "https://github.com", isForceUpdate: true)
+        }
+    }
 
     var body: some View {
-        ProgressBarWebView(viewModel: self.viewModel)
+        VStack {
+            updateButton
+            ProgressBarWebView(viewModel: self.viewModel)
+        }
     }
 }
 ```

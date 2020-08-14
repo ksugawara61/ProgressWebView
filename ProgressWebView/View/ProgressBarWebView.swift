@@ -16,7 +16,7 @@ public struct ProgressBarWebView: View {
     }
 
     public var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             ProgressBar(estimatedProgress: .constant(self.viewModel.estimatedProgress))
             WebView(viewModel: self.viewModel)
         }
